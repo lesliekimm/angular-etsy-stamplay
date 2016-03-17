@@ -54,7 +54,7 @@
 
           <!-- site logo -->
           <div class="navbar-header">
-              <a href="#" class="navbar-brand">
+              <a ui-sref="home" class="navbar-brand">
                   <span class="glyphicon glyphicon-heart-empty"></span>
                   Shop City
               </a>
@@ -71,16 +71,16 @@
           <!-- logged in navigation -->
           <!-- todo: check for logged in user -->
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Admin</a></li>
-              <li><a href="#">Purchases</a></li>
-              <li><a href="#">Profile</a></li>
+              <li><a ui-sref="admin">Admin</a></li>
+              <li><a ui-sref="#">Purchases</a></li>
+              <li><a ui-sref="profile">Profile</a></li>
               <li><a href="#">Logout</a></li>
           </ul>
 
           <!-- not logged in navigation -->
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Register</a></li>
-              <li><a href="#">Sign in</a></li>
+              <li><a ui-sref="authenticate">Register</a></li>
+              <li><a ui-sref="authenticate">Sign in</a></li>
           </ul>
 
       </div>
