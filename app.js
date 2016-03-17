@@ -1,11 +1,11 @@
 // app.js
 angular
-  .module('etsyApp', ['ngStamplay', 'ui.router', 'app.routes'])
-  .controller('MainController', MainController);
+    .module('etsyApp', ['ngStamplay', 'ui.router', 'app.routes'])
+    .controller('MainController', MainController);
 
 /**
- * The main controler for our app
+ * The main controller for our application
  */
 function MainController() {
-  var main = this;
-}
+    var main = this;
+} 
