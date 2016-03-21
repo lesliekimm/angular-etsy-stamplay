@@ -9,9 +9,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Georgia, serif;
 }
 
-a[ui-sref] {
-  cursor: pointer;
-}
+/* make sure that our a tags have the cursor */
+a[ui-sref]  { cursor:pointer; }
 
 /* header */
 #main-nav {
