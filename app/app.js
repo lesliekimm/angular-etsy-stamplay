@@ -10,7 +10,8 @@ angular
         'app.home',
         'app.product',
         'app.profile',
-        'app.shop'
+        'app.shop',
+        'UserService'
     ])
     .controller('MainController', MainController);
 
