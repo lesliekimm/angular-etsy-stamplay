@@ -1,8 +1,4 @@
 // authenticate.js
-angular
-    .module('app.authenticate', [])
-    .controller('AuthenticateController', ['User', '$rootScope', '$state', AuthenticateController]);
-
 function AuthenticateController(User, $rootScope, $state) {
   var authenticate = this;
 
@@ -18,16 +14,17 @@ function AuthenticateController(User, $rootScope, $state) {
    * Sign a user up and bind their info to $rootScope 
    */
   function signup() {
-    User.signup(authenticate.signupData).then(function(data) {
-      if (data.get('_id')) {
-        $rootScope.currentUser.id    = data.get('_id');
-        $rootScope.currentUser.name  = data.get('displayName');
-        $rootScope.currentUser.image = data.get('profileImg');
+    User.signup(authenticate.signupData)
+      .then(function(data) {
+        if (data.get('_id')) {
+          $rootScope.currentUser.id    = data.get('_id');
+          $rootScope.currentUser.name  = data.get('displayName');
+          $rootScope.currentUser.image = data.get('profileImg');
 
-        // redirect the user
-        $state.go('home');
-      }
-    });
+          // redirect the user
+          $state.go('home');
+        }
+      });
   }
 
   /**
@@ -35,15 +32,16 @@ function AuthenticateController(User, $rootScope, $state) {
    * Bind the user's information to $rootScope
    */
   function login() {
-    User.login(authenticate.loginData).then(function(data) {
-      if (data.get('_id')) {
-        $rootScope.currentUser.id    = data.get('_id');
-        $rootScope.currentUser.name  = data.get('displayName');
-        $rootScope.currentUser.image = data.get('profileImg');
+    User.login(authenticate.loginData)
+      .then(function(data) {
+        if (data.get('_id')) {
+          $rootScope.currentUser.id    = data.get('_id');
+          $rootScope.currentUser.name  = data.get('displayName');
+          $rootScope.currentUser.image = data.get('profileImg');
 
-        // redirect the user
-        $state.go('home');
-      }
-    });
+          // redirect the user
+          $state.go('home');
+        }
+      });
   }
 }
