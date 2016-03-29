@@ -1,4 +1,8 @@
 // authenticate.js
+angular
+  .module('app.authenticate', [])
+  .controller('AuthenticateController', ['User', '$rootScope', '$state', AuthenticateController]);
+
 function AuthenticateController(User, $rootScope, $state) {
   var authenticate = this;
 

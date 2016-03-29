@@ -19,12 +19,12 @@ function UserService($stamplay, $q) {
     var def = $q.defer();
 
     // instantiate a new user model from the stamplay js sdk
-    var user = Stamplay.User;               // tutorial uses v1 $stamplay.User().Model;
-    user.currentUser().then(function() {
-      // send the entire user model back
-      def.resolve(user);
-    });
-
+    var user = Stamplay.User;
+    user.currentUser()
+      .then(function() {
+        // send the entire user model back
+        def.resolve(user);
+      });
     return def.promise;
   }
 
@@ -36,11 +36,11 @@ function UserService($stamplay, $q) {
 
     // instantiate a new user model from the stamplay js sdk
     var user = Stamplay.User;
-    user.signup(data).then(function() {
-      // send the entire user model back
-      def.resolve(user);
-    })
-
+    user.signup(data)
+      .then(function() {
+        // send the entire user model back
+        def.resolve(user);
+      })
     return def.promise;
   }
 
@@ -51,13 +51,13 @@ function UserService($stamplay, $q) {
     var def = $q.defer();
 
     var user = Stamplay.User;
-    user.login(data.email, data.password).then(function() {
-      // send the entire user model back
-      def.resolve(user);
-    },
-    function() {
-      def.reject({ 'error': 'Unable to login user.' });
-    });
+    user.login(data.email, data.password)
+      .then(function() {
+        // send the entire user model back
+        def.resolve(user);
+      }, function() {
+        def.reject({ 'error': 'Unable to login user.' });
+      });
 
     return def.promise;
   }

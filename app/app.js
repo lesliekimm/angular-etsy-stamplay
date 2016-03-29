@@ -20,6 +20,7 @@ angular
  */
 function MainController(User, $rootScope) {
   var main         = this;
+  main.logout = logout; // bind the logout function to our controller
   $rootScope.currentUser = {}; // creating this object to hold our current users info
 
   // get the current user and bind their data to $rootScope.currentUser object

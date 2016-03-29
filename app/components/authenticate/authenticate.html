@@ -1,4 +1,3 @@
-<!-- authenticate.html -->
 <div class="row">
   <!-- SIGNUP -->
   <div class="col-sm-6">
@@ -7,7 +6,9 @@
     </div>
 
     <!-- signup button to use facebook -->
-    <p><a class="btn btn-block btn-primary" href="/auth/v1/facebook/connect">Sign Up with Facebook</a></p>
+    <p>
+      <a class="btn btn-block btn-primary" href="https://angularetsy.stamplayapp.com/auth/v1/facebook/connect" target="_blank">Sign Up with Facebook</a>
+    </p>
 
     <!-- form will use authenticate.signup on submit -->
     <form id="signupForm" ng-submit="authenticate.signup()">
@@ -36,8 +37,10 @@
       <h2>Login</h2>
     </div>
 
-    <!-- signup button to use Facebook -->
-    <p><a class="btn btn-block btn-primary" href="/auth/v1/facebook/connect">Login with Facebook</a></p>
+    <!-- signup button to use facebook -->
+    <p>
+      <a class="btn btn-block btn-primary" href="https://angularetsy.stamplayapp.com/auth/v1/facebook/connect" target="_blank">Login with Facebook</a>
+    </p>
 
     <!-- form will use authenticate.login on submit -->
     <form id="loginForm" ng-submit="authenticate.login()">
@@ -52,6 +55,6 @@
       </div>
 
       <button type="submit" class="btn btn-info">Login</button>
-    </form>    
+    </form>
   </div>
 </div>
